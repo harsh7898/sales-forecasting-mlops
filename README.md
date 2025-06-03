@@ -47,6 +47,8 @@ main.tf, variables.tf, outputs.tf are terraform files which allows to define and
 - Dockerized environment in airflow-docker/
 - Models trained in parallel with separate tasks.
 
+![DAGs Screenshot](https://github.com/harsh7898/sales-forecasting-mlops/blob/main/Images/Dag_Screenshot.png)
+
 
 ## Cloud Automation (GCP)
 
@@ -54,6 +56,7 @@ Used GCP Composer + Terraform + GitHub Actions to deploy pipeline:
 - Infrastructure setup via main.tf, variables.tf
 - Trigger via deploy_to_gcp.yml
 
+![Github Action](https://github.com/harsh7898/sales-forecasting-mlops/blob/main/Images/Github_action.png)
 
 ##  Run Locally
 
