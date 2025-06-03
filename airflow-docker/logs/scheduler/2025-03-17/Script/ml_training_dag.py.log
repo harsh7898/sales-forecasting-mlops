@@ -1,0 +1,131 @@
+[2025-03-17 00:30:13,419] {scheduler_job.py:182} INFO - Started process (PID=59) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:13,423] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:30:13,425] {logging_mixin.py:104} INFO - [2025-03-17 00:30:13,425] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:13,466] {logging_mixin.py:104} INFO - [2025-03-17 00:30:13,464] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:30:13,469] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:13,502] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.103 seconds
+[2025-03-17 00:30:43,584] {scheduler_job.py:182} INFO - Started process (PID=86) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:43,587] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:30:43,589] {logging_mixin.py:104} INFO - [2025-03-17 00:30:43,589] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:43,612] {logging_mixin.py:104} INFO - [2025-03-17 00:30:43,608] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:30:43,614] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:30:43,641] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.067 seconds
+[2025-03-17 00:31:14,372] {scheduler_job.py:182} INFO - Started process (PID=111) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:14,375] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:31:14,379] {logging_mixin.py:104} INFO - [2025-03-17 00:31:14,378] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:14,432] {logging_mixin.py:104} INFO - [2025-03-17 00:31:14,429] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:31:14,433] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:14,474] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.115 seconds
+[2025-03-17 00:31:44,586] {scheduler_job.py:182} INFO - Started process (PID=139) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:44,587] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:31:44,588] {logging_mixin.py:104} INFO - [2025-03-17 00:31:44,588] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:44,601] {logging_mixin.py:104} INFO - [2025-03-17 00:31:44,600] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:31:44,603] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:31:44,621] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.039 seconds
+[2025-03-17 00:32:14,828] {scheduler_job.py:182} INFO - Started process (PID=165) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:14,829] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:32:14,830] {logging_mixin.py:104} INFO - [2025-03-17 00:32:14,830] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:14,842] {logging_mixin.py:104} INFO - [2025-03-17 00:32:14,841] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:32:14,843] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:14,864] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.041 seconds
+[2025-03-17 00:32:45,166] {scheduler_job.py:182} INFO - Started process (PID=191) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:45,168] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:32:45,169] {logging_mixin.py:104} INFO - [2025-03-17 00:32:45,169] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:45,182] {logging_mixin.py:104} INFO - [2025-03-17 00:32:45,181] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:32:45,183] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:32:45,207] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.047 seconds
+[2025-03-17 00:33:15,996] {scheduler_job.py:182} INFO - Started process (PID=219) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:15,998] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:33:16,002] {logging_mixin.py:104} INFO - [2025-03-17 00:33:16,001] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:16,018] {logging_mixin.py:104} INFO - [2025-03-17 00:33:16,016] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:33:16,019] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:16,043] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.052 seconds
+[2025-03-17 00:33:46,688] {scheduler_job.py:182} INFO - Started process (PID=247) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:46,690] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:33:46,691] {logging_mixin.py:104} INFO - [2025-03-17 00:33:46,691] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:46,706] {logging_mixin.py:104} INFO - [2025-03-17 00:33:46,704] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:33:46,708] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:33:46,733] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.049 seconds
+[2025-03-17 00:34:17,627] {scheduler_job.py:182} INFO - Started process (PID=275) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:17,628] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:34:17,629] {logging_mixin.py:104} INFO - [2025-03-17 00:34:17,629] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:17,645] {logging_mixin.py:104} INFO - [2025-03-17 00:34:17,642] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/ml_training_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/ml_training_dag.py", line 7, in <module>
+    from Scripts.Model_training import *
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:34:17,647] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:17,668] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.045 seconds
+[2025-03-17 00:34:48,343] {scheduler_job.py:182} INFO - Started process (PID=303) to work on /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:48,345] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/ml_training_dag.py for tasks to queue
+[2025-03-17 00:34:48,348] {logging_mixin.py:104} INFO - [2025-03-17 00:34:48,348] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:48,349] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/ml_training_dag.py
+[2025-03-17 00:34:48,350] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/ml_training_dag.py took 0.011 seconds

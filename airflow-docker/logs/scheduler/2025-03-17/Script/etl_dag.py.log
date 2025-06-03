@@ -1,0 +1,131 @@
+[2025-03-17 00:30:11,368] {scheduler_job.py:182} INFO - Started process (PID=41) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:11,370] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:30:11,372] {logging_mixin.py:104} INFO - [2025-03-17 00:30:11,372] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:11,391] {logging_mixin.py:104} INFO - [2025-03-17 00:30:11,388] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:30:11,392] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:11,440] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.081 seconds
+[2025-03-17 00:30:41,523] {scheduler_job.py:182} INFO - Started process (PID=69) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:41,525] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:30:41,526] {logging_mixin.py:104} INFO - [2025-03-17 00:30:41,526] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:41,541] {logging_mixin.py:104} INFO - [2025-03-17 00:30:41,540] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:30:41,543] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:30:41,575] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.062 seconds
+[2025-03-17 00:31:12,481] {scheduler_job.py:182} INFO - Started process (PID=97) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:12,484] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:31:12,489] {logging_mixin.py:104} INFO - [2025-03-17 00:31:12,489] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:12,506] {logging_mixin.py:104} INFO - [2025-03-17 00:31:12,505] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:31:12,508] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:12,546] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.071 seconds
+[2025-03-17 00:31:42,650] {scheduler_job.py:182} INFO - Started process (PID=125) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:42,651] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:31:42,652] {logging_mixin.py:104} INFO - [2025-03-17 00:31:42,652] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:42,664] {logging_mixin.py:104} INFO - [2025-03-17 00:31:42,663] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:31:42,665] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:31:42,685] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.040 seconds
+[2025-03-17 00:32:13,300] {scheduler_job.py:182} INFO - Started process (PID=153) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:13,301] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:32:13,302] {logging_mixin.py:104} INFO - [2025-03-17 00:32:13,302] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:13,316] {logging_mixin.py:104} INFO - [2025-03-17 00:32:13,314] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:32:13,317] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:13,338] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.042 seconds
+[2025-03-17 00:32:43,637] {scheduler_job.py:182} INFO - Started process (PID=181) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:43,639] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:32:43,641] {logging_mixin.py:104} INFO - [2025-03-17 00:32:43,640] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:43,653] {logging_mixin.py:104} INFO - [2025-03-17 00:32:43,652] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:32:43,654] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:32:43,675] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.043 seconds
+[2025-03-17 00:33:14,519] {scheduler_job.py:182} INFO - Started process (PID=209) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:14,521] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:33:14,522] {logging_mixin.py:104} INFO - [2025-03-17 00:33:14,522] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:14,536] {logging_mixin.py:104} INFO - [2025-03-17 00:33:14,534] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:33:14,538] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:14,559] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.044 seconds
+[2025-03-17 00:33:45,201] {scheduler_job.py:182} INFO - Started process (PID=237) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:45,203] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:33:45,205] {logging_mixin.py:104} INFO - [2025-03-17 00:33:45,205] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:45,219] {logging_mixin.py:104} INFO - [2025-03-17 00:33:45,217] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:33:45,221] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:33:45,241] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.046 seconds
+[2025-03-17 00:34:15,953] {scheduler_job.py:182} INFO - Started process (PID=265) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:15,955] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:34:15,956] {logging_mixin.py:104} INFO - [2025-03-17 00:34:15,956] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:15,969] {logging_mixin.py:104} INFO - [2025-03-17 00:34:15,967] {dagbag.py:308} ERROR - Failed to import: /opt/airflow/dags/Script/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 305, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/Script/etl_dag.py", line 45, in <module>
+    from Scripts.etl import run_etl_process  # Assuming the 'run_etl_process' function is in the 'etl' module
+ModuleNotFoundError: No module named 'Scripts'
+[2025-03-17 00:34:15,970] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:15,991] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.043 seconds
+[2025-03-17 00:34:46,741] {scheduler_job.py:182} INFO - Started process (PID=293) to work on /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:46,743] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/Script/etl_dag.py for tasks to queue
+[2025-03-17 00:34:46,744] {logging_mixin.py:104} INFO - [2025-03-17 00:34:46,743] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:46,745] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/Script/etl_dag.py
+[2025-03-17 00:34:46,745] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/Script/etl_dag.py took 0.008 seconds

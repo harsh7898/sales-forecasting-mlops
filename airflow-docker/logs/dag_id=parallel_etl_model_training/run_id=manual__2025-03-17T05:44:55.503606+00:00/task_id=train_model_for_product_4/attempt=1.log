@@ -1,0 +1,37 @@
+[2025-03-17T05:48:54.113+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-17T05:48:54.220+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parallel_etl_model_training.train_model_for_product_4 manual__2025-03-17T05:44:55.503606+00:00 [queued]>
+[2025-03-17T05:48:54.254+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parallel_etl_model_training.train_model_for_product_4 manual__2025-03-17T05:44:55.503606+00:00 [queued]>
+[2025-03-17T05:48:54.255+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-17T05:48:54.320+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): train_model_for_product_4> on 2025-03-17 05:44:55.503606+00:00
+[2025-03-17T05:48:54.357+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=334) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-17T05:48:54.364+0000] {standard_task_runner.py:72} INFO - Started process 517 to run task
+[2025-03-17T05:48:54.367+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'parallel_etl_model_training', 'train_model_for_product_4', 'manual__2025-03-17T05:44:55.503606+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/Scripts/parallel_etl_and_model_training.py', '--cfg-path', '/tmp/tmp600_qf8l']
+[2025-03-17T05:48:54.373+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask train_model_for_product_4
+[2025-03-17T05:48:54.494+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-17T05:48:54.700+0000] {task_command.py:467} INFO - Running <TaskInstance: parallel_etl_model_training.train_model_for_product_4 manual__2025-03-17T05:44:55.503606+00:00 [running]> on host b4dde35c7dfd
+[2025-03-17T05:48:55.004+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parallel_etl_model_training' AIRFLOW_CTX_TASK_ID='train_model_for_product_4' AIRFLOW_CTX_EXECUTION_DATE='2025-03-17T05:44:55.503606+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-17T05:44:55.503606+00:00'
+[2025-03-17T05:48:55.009+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-17T05:48:55.011+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-17T05:48:55.012+0000] {logging_mixin.py:190} INFO - Current task name:train_model_for_product_4 state:running start_date:2025-03-17 05:48:54.221396+00:00
+[2025-03-17T05:48:55.014+0000] {logging_mixin.py:190} INFO - Dag name:parallel_etl_model_training and current dag run status:running
+[2025-03-17T05:48:55.015+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-17T05:48:55.034+0000] {parallel_etl_and_model_training.py:97} INFO - Starting model training for product: 27in 4K Gaming Monitor
+[2025-03-17T05:49:06.036+0000] {parallel_etl_and_model_training.py:100} INFO - Feature data downloaded. Shape: (185116, 24)
+[2025-03-17T05:49:06.065+0000] {parallel_etl_and_model_training.py:103} INFO - Product data prepared. Shape: (6195, 24)
+[2025-03-17T05:49:06.068+0000] {parallel_etl_and_model_training.py:106} INFO - Data split. Train shape: (4956, 24), Test shape: (1239, 24)
+[2025-03-17T05:49:09.441+0000] {parallel_etl_and_model_training.py:109} INFO - Model built and evaluated for product: 27in 4K Gaming Monitor
+[2025-03-17T05:49:10.981+0000] {parallel_etl_and_model_training.py:113} INFO - Model saved to models/27in_4K_Gaming_Monitor_sales_model.pkl
+[2025-03-17T05:49:10.983+0000] {python.py:240} INFO - Done. Returned value was: True
+[2025-03-17T05:49:11.032+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-17T05:49:11.034+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=parallel_etl_model_training, task_id=train_model_for_product_4, run_id=manual__2025-03-17T05:44:55.503606+00:00, execution_date=20250317T054455, start_date=20250317T054854, end_date=20250317T054911
+[2025-03-17T05:49:11.084+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-17T05:49:11.085+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-17T05:49:11.086+0000] {logging_mixin.py:190} INFO - Dag name:parallel_etl_model_training queued_at:2025-03-17 05:44:55.684590+00:00
+[2025-03-17T05:49:11.086+0000] {logging_mixin.py:190} INFO - Task hostname:b4dde35c7dfd operator:PythonOperator
+[2025-03-17T05:49:11.121+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-17T05:49:11.163+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-17T05:49:11.167+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

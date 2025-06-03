@@ -1,0 +1,262 @@
+[2025-03-18T01:03:02.696+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-18T01:03:02.722+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parallel_etl_model_training.extract_raw_data scheduled__2025-03-17T00:00:00+00:00 [queued]>
+[2025-03-18T01:03:02.733+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parallel_etl_model_training.extract_raw_data scheduled__2025-03-17T00:00:00+00:00 [queued]>
+[2025-03-18T01:03:02.734+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-03-18T01:03:02.752+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_raw_data> on 2025-03-17 00:00:00+00:00
+[2025-03-18T01:03:02.761+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1073) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-18T01:03:02.763+0000] {standard_task_runner.py:72} INFO - Started process 1086 to run task
+[2025-03-18T01:03:02.764+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'parallel_etl_model_training', 'extract_raw_data', 'scheduled__2025-03-17T00:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/Scripts/etl_training_dag.py', '--cfg-path', '/tmp/tmpuechl4yc']
+[2025-03-18T01:03:02.765+0000] {standard_task_runner.py:105} INFO - Job 40: Subtask extract_raw_data
+[2025-03-18T01:03:02.779+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-18T01:03:02.820+0000] {task_command.py:467} INFO - Running <TaskInstance: parallel_etl_model_training.extract_raw_data scheduled__2025-03-17T00:00:00+00:00 [running]> on host b4dde35c7dfd
+[2025-03-18T01:03:02.821+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  if conf.get("database", "sql_alchemy_conn") == "none://":
+
+[2025-03-18T01:03:02.922+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parallel_etl_model_training' AIRFLOW_CTX_TASK_ID='extract_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-17T00:00:00+00:00'
+[2025-03-18T01:03:02.923+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-18T01:03:02.924+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-18T01:03:02.924+0000] {logging_mixin.py:190} INFO - Current task name:extract_raw_data state:running start_date:2025-03-18 01:03:02.722923+00:00
+[2025-03-18T01:03:02.924+0000] {logging_mixin.py:190} INFO - Dag name:parallel_etl_model_training and current dag run status:running
+[2025-03-18T01:03:02.925+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-18T01:03:02.926+0000] {etl_training_dag.py:31} INFO - Starting raw data extraction
+[2025-03-18T02:02:12.387+0000] {etl_training_dag.py:41} ERROR - Error in raw data extraction: Timeout of 120.0s exceeded, last exception: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+[2025-03-18T02:02:12.402+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 754, in _error_catcher
+    yield
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 900, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(539443 bytes read, 507052 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 1066, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 983, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 878, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 778, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 242, in retriable_request
+    self._write_to_stream(result)
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 132, in _write_to_stream
+    for chunk in body_iter:
+                 ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Scripts/etl_training_dag.py", line 33, in extract_raw_data
+    raw_df = raw_data()
+             ^^^^^^^^^^
+  File "/opt/airflow/dags/Scripts/etl.py", line 30, in raw_data
+    file_content = blob.download_as_text()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1712, in download_as_text
+    data = self.download_as_bytes(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1495, in download_as_bytes
+    self._prep_and_do_download(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 4341, in _prep_and_do_download
+    self._do_download(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1082, in _do_download
+    response = download.consume(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 246, in consume
+    return _request_helpers.wait_and_retry(retriable_request, self._retry_strategy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/_request_helpers.py", line 107, in wait_and_retry
+    return func()
+           ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 221, in _retry_error_helper
+    raise final_exc from source_exc
+google.api_core.exceptions.RetryError: Timeout of 120.0s exceeded, last exception: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+[2025-03-18T02:02:12.483+0000] {job.py:229} INFO - Heartbeat recovered after 3549.86 seconds
+[2025-03-18T02:02:12.527+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-18T02:02:12.529+0000] {logging_mixin.py:190} INFO - Task start:2025-03-18 01:03:02.722923+00:00 end:2025-03-18 02:02:12.525888+00:00 duration:3549.802965
+[2025-03-18T02:02:12.531+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_raw_data> dag:<DAG: parallel_etl_model_training> dagrun:<DagRun parallel_etl_model_training @ 2025-03-17 00:00:00+00:00: scheduled__2025-03-17T00:00:00+00:00, state:running, queued_at: 2025-03-18 00:01:57.535518+00:00. externally triggered: False>
+[2025-03-18T02:02:12.537+0000] {logging_mixin.py:190} INFO - Failure caused by Timeout of 120.0s exceeded, last exception: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+[2025-03-18T02:02:12.539+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=parallel_etl_model_training, task_id=extract_raw_data, run_id=scheduled__2025-03-17T00:00:00+00:00, execution_date=20250317T000000, start_date=20250318T010302, end_date=20250318T020212
+[2025-03-18T02:02:12.651+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-18T02:02:12.653+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 40 for task extract_raw_data (Timeout of 120.0s exceeded, last exception: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected)); 1086)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 754, in _error_catcher
+    yield
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 900, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(539443 bytes read, 507052 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 1066, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 983, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 878, in _raw_read
+    with self._error_catcher():
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/response.py", line 778, in _error_catcher
+    raise ProtocolError(arg, e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 242, in retriable_request
+    self._write_to_stream(result)
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 132, in _write_to_stream
+    for chunk in body_iter:
+                 ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Scripts/etl_training_dag.py", line 33, in extract_raw_data
+    raw_df = raw_data()
+             ^^^^^^^^^^
+  File "/opt/airflow/dags/Scripts/etl.py", line 30, in raw_data
+    file_content = blob.download_as_text()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1712, in download_as_text
+    data = self.download_as_bytes(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1495, in download_as_bytes
+    self._prep_and_do_download(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 4341, in _prep_and_do_download
+    self._do_download(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 1082, in _do_download
+    response = download.consume(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/download.py", line 246, in consume
+    return _request_helpers.wait_and_retry(retriable_request, self._retry_strategy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/_media/requests/_request_helpers.py", line 107, in wait_and_retry
+    return func()
+           ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 221, in _retry_error_helper
+    raise final_exc from source_exc
+google.api_core.exceptions.RetryError: Timeout of 120.0s exceeded, last exception: ('Connection broken: IncompleteRead(539443 bytes read, 507052 more expected)', IncompleteRead(539443 bytes read, 507052 more expected))
+[2025-03-18T02:02:12.716+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-18T02:02:12.766+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T02:02:12.775+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
